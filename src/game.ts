@@ -68,12 +68,12 @@ export class Game implements GameInterface {
     if (this.status !== 'init') throw new Error('Game is already started');
 
     this.setBet();
-    await setTimeout(1500);
+    await setTimeout(15000);
     this.spin();
-    await setTimeout(500);
+    await setTimeout(5000);
 
     const result = this.getResult();
-    await setTimeout(100);
+    await setTimeout(1000);
     this.rewards(result);
   }
 }
